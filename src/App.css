@@ -1,8 +1,5 @@
-/* .App {
-  text-align: center;
-} */
 
-#car-list {
+#page-list {
   margin: 2rem;
 }
 
@@ -15,17 +12,25 @@
   height: 25rem;
   display: inline-grid;
   margin: 1rem 2rem;
-  box-shadow: 3px 4px #e04b52
+  box-shadow: 3px 4px #4b73e0
 }
 
+/* this adjust the car piture in the cards (do no touch) */
 .car-picture {
   justify-self: center;
   height: 6rem;
   width: auto;
 }
+
+.showcase-pic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .submit {
   position: relative;
-  background-color: #e04b52;
+  background-color: #4b73e0;
   border-radius: 5px;
   height: 2rem;
   width: max-content;
@@ -36,8 +41,24 @@
   margin: 3px;
 }
 
+h1 {
+  text-align: center;
+}
+
 .submit:hover {
   background-color: whitesmoke;
-  border: #e04b52 solid 1px;
-  color: #e04b52;
+  border: #4b73e0 solid 1px;
+  color: #4b73e0;
+}
+
+.Car-form {
+  background-color: rgba(187, 189, 194, 0.349);
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: stretch;
+  height: auto;
+  display: inline-grid;
+  margin: 1rem 2rem;
+  box-shadow: 3px 4px #4b73e0
 }

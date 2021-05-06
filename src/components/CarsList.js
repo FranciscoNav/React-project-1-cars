@@ -59,7 +59,6 @@ export default class CarsList extends Component {
     .then(data =>{
       let carIndex = this.state.allCars.indexOf(car)
       this.state.allCars.splice(carIndex, 1)
-      console.log(carIndex)
       this.setState({
         allCars:[...this.state.allCars]
       })
@@ -70,7 +69,9 @@ export default class CarsList extends Component {
         const renderCars= this.state.allCars.map(carE => <CarCard car={carE} addToGarage={this.addToGarage} deleteCar={this.deleteCar}/>)
 
         return (
-            <div id="car-list">
+            <div id="page-list">
+                <h1>Master Car List</h1>
+                <p1>Select any car you would like to have in your garage. If we are missing a car you like, please fill out this form.</p1>
                 <CarForm addNewCar={this.addNewCar}/>
                 {renderCars}
             </div>

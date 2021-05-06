@@ -17,8 +17,14 @@ class ShowCase extends Component {
     render() {
         return (
             <div>
-                I am a car ShowCase!! 
-                <p>{this.state.car.name}</p>
+                <h1>The {this.state.car.name}!</h1>
+                <img src={this.state.car.image} alt={this.state.car.name} className="showcase-pic" />
+                <ul> Below are all the details regarding your {this.state.car.name}    
+                    <li>Base Price: ${this.state.car.price}</li>
+                    <li>Horsepower: {this.state.car.horsepower}</li>
+                    <li>Production Year: {this.state.car.year}</li>
+                    <li>Garage ID: {this.state.car.id}</li>
+                </ul>
             </div>
         )
     }

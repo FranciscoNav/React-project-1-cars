@@ -3,16 +3,19 @@ import GarageCard from './GarageCard'
 
 class MyGarage extends Component {
     state = {
-        myGarage:[]
+        myGarage:[],
+        netValue: 0
     }
     
     componentDidMount(){
         fetch('http://localhost:3001/garage')
         .then(response => response.json())
-        .then(data => 
-            this.setState({
+        .then(data => {
+          this.setState({
             myGarage: data 
-        }))
+          })
+          this.calculateNetValue()
+      })
     }
 
     deleteCarInGarage = (car) => {
@@ -31,26 +34,34 @@ class MyGarage extends Component {
           this.setState({
             myGarage:[...this.state.myGarage]
           })
+          this.calculateNetValue()
         })
       }
 
       calculateNetValue = () => {
-        const price = this.state.myGarage.map(e => e.price)
-        price.reduce((accumulator, currentValue) => accumulator+ currentValue)
-        console.log('Price', price.reduce((accumulator, currentValue) => accumulator+ currentValue))
+        const stateLength = this.state.myGarage.length
+        if (stateLength === 0){
+          return 0
+        }else{
+          const price = this.state.myGarage.map(e => e.price)
+          const adder = price.reduce((accumulator, currentValue) => accumulator+ currentValue)
+          this.setState({
+            netValue: adder
+          })
+        }
       }
 
     render() {
         const renderGarageCards = this.state.myGarage.map(carE => <GarageCard car={carE} deleteCar={this.deleteCarInGarage}/>)
         
         return (
-            <div>
-                <h1>My Garage</h1>
+            <div id="page-list">
+                <h1>Welcome to YOUR Dream Garage</h1>
+                <p>Click “More Details”, if you would like to see more information about any of the cars you selected. If you changed your mind about a car, you can remove it from the garage by clicking on the “Remove from Garage” button.</p>
                 {renderGarageCards}
                 <br/>
                 <hr/>
-                <p>Garage Value = ${this.calculateNetValue} </p>
-                <button className="remove-btn" onClick={this.calculateNetValue}>Calculate net value</button>
+                <p>Garage Net Value = ${this.state.netValue}</p>
             </div>
         )
     }
