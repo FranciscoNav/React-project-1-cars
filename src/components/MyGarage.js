@@ -57,11 +57,11 @@ class MyGarage extends Component {
         return (
             <div id="page-list">
                 <h1>Welcome to YOUR Dream Garage</h1>
-                <p>Click “More Details”, if you would like to see more information about any of the cars you selected. If you changed your mind about a car, you can remove it from the garage by clicking on the “Remove from Garage” button.</p>
+                <p className="description">Click “More Details”, if you would like to see more information about any of the cars you selected. If you changed your mind about a car, you can remove it from the garage by clicking on the “Remove from Garage” button.</p>
                 {renderGarageCards}
                 <br/>
                 <hr/>
-                <p>Garage Net Value = ${this.state.netValue}</p>
+                <p id="net-value">Garage Net Value = ${this.state.netValue}</p>
             </div>
         )
     }

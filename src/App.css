@@ -1,3 +1,6 @@
+body {
+  background:rgb(218, 244, 255)
+}
 
 #page-list {
   margin: 2rem;
@@ -37,11 +40,14 @@
   color: whitesmoke;
   font-size: 18px;
   justify-self: center;
-  font-family: monospace;
   margin: 3px;
 }
 
 h1 {
+  text-align: center;
+}
+
+.description {
   text-align: center;
 }
 
@@ -52,7 +58,7 @@ h1 {
 }
 
 .Car-form {
-  background-color: rgba(187, 189, 194, 0.349);
+  background-color: rgba(187, 189, 194, 0.664);
   text-align: center;
   border: grey solid 1px;
   padding: 1rem;
@@ -61,4 +67,26 @@ h1 {
   display: inline-grid;
   margin: 1rem 2rem;
   box-shadow: 3px 4px #4b73e0
+}
+
+.navbar{
+  background-color:#4b73e0;
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: stretch;
+  height: auto;
+}
+
+#net-value {
+  margin: 2rem;
+  font-weight: 500;
+}
+
+.car-details{
+  font-weight: 500;
+}
+
+li {
+  margin: 2rem;
 }

@@ -71,7 +71,7 @@ export default class CarsList extends Component {
         return (
             <div id="page-list">
                 <h1>Master Car List</h1>
-                <p1>Select any car you would like to have in your garage. If we are missing a car you like, please fill out this form.</p1>
+                <p className="description">Select any car you would like to have in your garage. If we are missing a car you like, please fill out this form.</p>
                 <CarForm addNewCar={this.addNewCar}/>
                 {renderCars}
             </div>

@@ -30,7 +30,7 @@ class CarForm extends Component {
     render() {
         return (
             <div className="Car-form">
-                <form classNmae="add-new-car" onSubmit={this.handleSubmit}>
+                <form className="add-new-car" onSubmit={this.handleSubmit}>
                     <h3>Add New Car</h3>
                     {/* <div></div> */}
                     <input type="text" name="name" placeholder="Enter a car's name" onChange={this.handleChange} />
