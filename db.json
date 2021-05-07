@@ -1,0 +1,62 @@
+{
+  "cars": [
+    {
+      "name": "McLaren 720S",
+      "image": "https://www.pngfind.com/pngs/m/134-1344723_mclaren-720s-mclaren-720s-matte-black-hd-png.png",
+      "price": 299000,
+      "horsepower": 710,
+      "year": 2020,
+      "id": 1
+    },
+    {
+      "name": "BMW M2",
+      "image": "https://www.pngfind.com/pngs/m/29-295759_pluspng-bmw-png-2016-bmw-m2-transparent-png.png",
+      "price": 58900,
+      "horsepower": "405",
+      "year": 2021,
+      "id": 2
+    },
+    {
+      "name": "Ferrari Portofino",
+      "image": "https://www.pngfind.com/pngs/m/321-3219896_ferrari-portofino-v8-ferrari-portofino-2019-png-transparent.png",
+      "price": 215000,
+      "horsepower": "591",
+      "year": "2020",
+      "id": 3
+    },
+    {
+      "name": "Lamborghini Huracan",
+      "image": "https://www.pngfind.com/pngs/m/50-504366_lamborghini-car-png-image-lamborghini-price-in-oman.png",
+      "price": 208571,
+      "horsepower": "610",
+      "year": "2020",
+      "id": 5
+    },
+    {
+      "name": " Porsche 911",
+      "image": "https://www.pngfind.com/pngs/m/391-3918757_2017-porsche-911-yellow-porsche-911-2019-grey.png",
+      "price": 92000,
+      "horsepower": "370",
+      "year": "2018",
+      "id": 6
+    }
+  ],
+  "garage": [
+    {
+      "name": "Lamborghini Huracan",
+      "image": "https://www.pngfind.com/pngs/m/50-504366_lamborghini-car-png-image-lamborghini-price-in-oman.png",
+      "price": 208571,
+      "horsepower": "610",
+      "year": "2020",
+      "id": 5
+    },
+    {
+      "name": " Porsche 911",
+      "image": "https://www.pngfind.com/pngs/m/391-3918757_2017-porsche-911-yellow-porsche-911-2019-grey.png",
+      "price": 92000,
+      "horsepower": "370",
+      "year": "2018",
+      "id": 6
+    }
+  ]
+}

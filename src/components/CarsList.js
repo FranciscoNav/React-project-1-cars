@@ -3,16 +3,24 @@ import CarCard from './CarCard'
 import CarForm from './CarForm'
   
 export default class CarsList extends Component {
-    state = {
-        allCars: [],
-    }
+  state = {
+      allCars: [],
+      display: false
+  }
+
+  handleClick = () => {
+    let newBoolean = !this.state.display
+    this.setState({
+      display: newBoolean
+    })
+  }
 
   componentDidMount(){
     fetch('http://localhost:3001/cars')
     .then(response => response.json())
     .then(data => 
       this.setState({
-      allCars: data
+        allCars: data
     }))
   }
 
@@ -31,6 +39,7 @@ export default class CarsList extends Component {
         allCars:[...this.state.allCars, data]
       })
     })
+    this.handleClick()
   }
 
   addToGarage=(car)=>{
@@ -65,16 +74,19 @@ export default class CarsList extends Component {
     })
   }
 
-    render() {
-        const renderCars= this.state.allCars.map(carE => <CarCard car={carE} addToGarage={this.addToGarage} deleteCar={this.deleteCar}/>)
+  render() {
+    const renderCars= this.state.allCars.map(carE => <CarCard car={carE} addToGarage={this.addToGarage} deleteCar={this.deleteCar}/>)
 
-        return (
-            <div id="page-list">
-                <h1>Master Car List</h1>
-                <p className="description">Select any car you would like to have in your garage. If we are missing a car you like, please fill out this form.</p>
-                <CarForm addNewCar={this.addNewCar}/>
-                {renderCars}
+    return (
+        <div id="page-list">
+            <h1>Master Car List</h1>
+            <p className="description">Select any car you would like to have in your garage. If we are missing a car you like, please fill out this form.</p>
+            {this.state.display ? <CarForm addNewCar={this.addNewCar}/>: null}
+            <div className="buttonContainer">
+              <button onClick={this.handleClick} className="add-button"> Add Car </button>
             </div>
-        )
-    }
+            {renderCars}
+        </div>
+    )
+  }
 }

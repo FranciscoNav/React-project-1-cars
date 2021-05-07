@@ -10,7 +10,7 @@ class ShowCase extends Component {
         .then(response => response.json())
         .then(data => 
             this.setState({
-            car: data
+                car: data
         }))
     }
 
