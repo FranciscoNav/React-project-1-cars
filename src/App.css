@@ -18,7 +18,6 @@ body {
   box-shadow: 3px 4px #4b73e0
 }
 
-/* this adjust the car piture in the cards (do no touch) */
 .car-picture {
   justify-self: center;
   height: 6rem;

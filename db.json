@@ -39,17 +39,17 @@
       "horsepower": "370",
       "year": "2018",
       "id": 6
+    },
+    {
+      "name": "test",
+      "image": "",
+      "price": 100000000000,
+      "horsepower": "",
+      "year": "",
+      "id": 7
     }
   ],
   "garage": [
-    {
-      "name": "Ferrari Portofino",
-      "image": "https://www.pngfind.com/pngs/m/321-3219896_ferrari-portofino-v8-ferrari-portofino-2019-png-transparent.png",
-      "price": 215000,
-      "horsepower": "591",
-      "year": "2020",
-      "id": 3
-    },
     {
       "name": "Lamborghini Huracan",
       "image": "https://www.pngfind.com/pngs/m/50-504366_lamborghini-car-png-image-lamborghini-price-in-oman.png",

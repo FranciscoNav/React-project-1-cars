@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 class CarCard extends Component {
-  
+
   handleClick=()=>{
     alert(`${this.props.car.name} has been added to the YOUR dream garage`)
     this.props.addToGarage(this.props.car)
@@ -10,7 +10,7 @@ class CarCard extends Component {
   handleRemove=()=>{
     this.props.deleteCar(this.props.car)
   }
-  
+
   render() {
     return (
       <div className="card">

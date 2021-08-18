@@ -16,7 +16,7 @@ In the “My garage” tab, they can see all the cars they selected from the car
 
 ## Demo video 
 Copy and paste the link below into your browser to see a demo of the website 
-https://studio.youtube.com/video/MdThca-IqLg/edit
+https://www.youtube.com/watch?v=MdThca-IqLg
 
 
 
